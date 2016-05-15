@@ -14,9 +14,7 @@ chrome.webRequest.onCompleted.addListener(
     if (chrome.extension.inIncognitoContext) {
       queryCheck = getQuery("q",details.url)
       if (queryCheck != null) {
-        console.log("Woot!")
-        console.log(queryCheck)
-        console.log(chrome.extension.inIncognitoContext)
+        responsiveVoice.speak(queryCheck);
       }      
     }
     },{urls: ["*://www.google.com/*"]},["responseHeaders"]);

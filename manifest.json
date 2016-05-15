@@ -9,10 +9,16 @@
     "default_icon": "icon.png",
     "default_popup": "danger.html"
   },
+  "background": {
+    "page": "danger.html"
+  },
   "permissions": [
     "webRequest",
     "*://*.google.com/",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "https://www.facebook.com/",
+    "https://graph.facebook.com/"
   ],
-  "incognito": "split"
+  "incognito": "split",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
