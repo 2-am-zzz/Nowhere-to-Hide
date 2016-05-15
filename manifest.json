@@ -14,6 +14,8 @@
   },
   "permissions": [
     "webRequest",
+    "sessions",
+    "input",
     "*://*.google.com/",
     "https://ajax.googleapis.com/",
     "https://www.facebook.com/",
