@@ -13,5 +13,6 @@
     "webRequest",
     "*://*.google.com/",
     "https://ajax.googleapis.com/"
-  ]
+  ],
+  "incognito": "split"
 }
