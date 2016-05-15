@@ -11,9 +11,12 @@ function getQuery(name, url) {
 
 chrome.webRequest.onCompleted.addListener(
   function(details) {
-    queryCheck = getQuery("q",details.url)
-    if (queryCheck != null) {
-      console.log("Woot!")
-      console.log(queryCheck)
+    if (chrome.extension.inIncognitoContext) {
+      queryCheck = getQuery("q",details.url)
+      if (queryCheck != null) {
+        console.log("Woot!")
+        console.log(queryCheck)
+        console.log(chrome.extension.inIncognitoContext)
+      }      
     }
     },{urls: ["*://www.google.com/*"]},["responseHeaders"]);
